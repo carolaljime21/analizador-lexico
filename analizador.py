@@ -1,6 +1,8 @@
 import re
 import string
 
+
+print("ANALIZADOR LEXICO")
 # Definir los operadores
 operadores = {
     '=': 'Igual a',
@@ -52,33 +54,33 @@ file = open("read.txt")
 a = file.read()
 
 count = 0
-program = a.split("\n")
-for line in program:
+archivo = a.split("\n")
+for line in archivo:
     count += 1
-    print(f"Estas en la linea # {count}\n")
-    print(f"Contenido: {line}")
+    print(f"Linea # {count}\n")
+    print(f"Texto: {line}")
 
     # Usar expresiones regulares para tokenización, incluyendo números decimales
     tokens = re.findall(r'<\!|!\>|\d+\.\d+|\d+|\w+|[^\s\w]', line)
     print("Los elementos son:", tokens)
-    print(f"Propiedades de la línea # {count}\n")
+    print(f"\nPropiedades de la línea #{count}\n")
     
     for token in tokens:
         if token in operadores_key:
-            print(f"{token} es {operadores[token]}")
+            print(f"{token} es: {operadores[token]}")
         elif token in palabras_reservadas_key:
-            print(f"{token} es {palabras_reservadas[token]}")
+            print(f"{token} es: {palabras_reservadas[token]}")
         elif token in simbolos_key:
-            print(f'{token} es {simbolos[token]}')
+            print(f'{token} es: {simbolos[token]}')
         elif re.match(r'^\d+\.\d+$', token):  # Verificar si es un número decimal
-            print(f"{token} es un Número decimal")
+            print(f"{token} es: un Número decimal")
         elif token.isdigit() and int(token) in numeros_key:
             print(f"{token} es {numeros[int(token)]}")
         elif token.isalpha():
-            print(f"{token} es una cadena de texto")
+            print(f"{token} es: una cadena de texto")
         else:
-            print(f"{token} es un token desconocido o variable no registrada.")
+            print(f"{token} es: un token desconocido o variable no registrada.")
     
-    print("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _  _")
+    print("------------------------------------------------------------------------------")
 
 file.close()

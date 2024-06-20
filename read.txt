@@ -1,12 +1,10 @@
-13 + 13
+<! start !>
+13 + 13 = 26
 var int " advc " : si
-
 <! hola !>
-
 # hola
-
 ( 100 * 100 )
-
 <! var double !> numero : 123.55
-
 <! var double !> numero : ( 1 / 1 )
+" hola mundo "
+<! end !>
