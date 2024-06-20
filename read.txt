@@ -8,3 +8,4 @@ var int " advc " : si
 <! var double !> numero : ( 1 / 1 )
 " hola mundo "
 <! end !>
+{ scdscs34 }
