@@ -1,0 +1,12 @@
+13 + 13
+var int " advc " : si
+
+<! hola !>
+
+# hola
+
+( 100 * 100 )
+
+<! var double !> numero : 123.55
+
+<! var double !> numero : ( 1 / 1 )
