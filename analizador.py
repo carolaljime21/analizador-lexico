@@ -62,8 +62,7 @@ for line in archivo:
 
     # Usar expresiones regulares para tokenización, incluyendo números decimales
     tokens = re.findall(r'<\!|!\>|\d+\.\d+|\d+|\w+|[^\s\w]', line)
-    print("Los elementos son:", tokens)
-    print(f"\nPropiedades de la línea #{count}\n")
+    print("Los elementos son:", tokens, "\n")
     
     for token in tokens:
         if token in operadores_key:
